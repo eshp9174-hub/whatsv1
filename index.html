@@ -10,60 +10,258 @@
     content="width=device-width, initial-scale=1.0"
   />
 
-  <title>Descubra a Verdade</title>
+  <title>Análise Comportamental</title>
 
   <meta
     name="description"
-    content="Acesse tudo que seu parceiro esconde no celular."
+    content="Experiência educacional e comportamental interativa."
   />
 
-  <!-- PERFORMANCE -->
   <meta name="theme-color" content="#07010f" />
 
-  <!-- PRECONNECT -->
+  <!-- FONT -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <!-- FONT -->
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;900&display=swap"
     rel="stylesheet"
   />
 
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
 
 </head>
 
 <body>
 
-  <main class="hero">
+  <!-- ETAPA 1 -->
 
-    <div class="overlay-glow"></div>
+  <section class="step active" id="step1">
 
-    <section class="hero-content">
+    <div class="glow"></div>
+
+    <div class="container">
 
       <h1>
-        VOCÊ ESTÁ PRONTO (a) PARA ACESSAR TUDO QUE SEU PARCEIRO (a)
-        <span>ESCONDE NO CELULAR?</span>
+        VOCÊ ESTÁ PRONTO(A) PARA ENTENDER
+        <span>PADRÕES COMPORTAMENTAIS?</span>
       </h1>
 
       <p>
-        Contra fatos e provas não há argumentos.
+        Uma experiência educacional sobre comportamento digital.
       </p>
 
-      <a
-        href="https://SEU-CHECKOUT-AQUI.com"
-        class="cta pulse"
+      <button class="cta" data-next="step2">
+        COMEÇAR EXPERIÊNCIA
+      </button>
+
+    </div>
+
+  </section>
+
+  <!-- ETAPA 2 -->
+
+  <section class="step" id="step2">
+
+    <div class="glow"></div>
+
+    <div class="container">
+
+      <h2>
+        SIMULE UMA
+        <span>ANÁLISE COMPORTAMENTAL</span>
+      </h2>
+
+      <p class="subhead">
+        Experiência ilustrativa e educacional.
+      </p>
+
+      <div class="form-box">
+
+        <input
+          type="tel"
+          id="phone"
+          maxlength="15"
+          placeholder="(11) 99999-9999"
+        >
+
+        <button id="consultarBtn">
+          INICIAR ANÁLISE
+        </button>
+
+      </div>
+
+      <div class="loader-area" id="loaderArea">
+
+        <div class="loading-text">
+          Processando padrões...
+        </div>
+
+        <div class="loader-bar">
+          <div class="loader-fill"></div>
+        </div>
+
+      </div>
+
+      <div class="resultado-box" id="resultadoBox">
+
+        <div class="resultado-title">
+          ✓ Relatório ilustrativo concluído
+        </div>
+
+        <div class="resultado-item">
+          ✓ Mudanças de rotina percebidas
+        </div>
+
+        <div class="resultado-item">
+          ✓ Padrões digitais identificados
+        </div>
+
+        <div class="resultado-item">
+          ✓ Comportamentos inconsistentes simulados
+        </div>
+
+        <div class="resultado-alert">
+          Conteúdo totalmente educacional e demonstrativo.
+        </div>
+
+      </div>
+
+      <div
+        class="next-step-area"
+        id="nextStepArea"
       >
-        QUERO DESCOBRIR AGORA
-      </a>
 
-    </section>
+        <div class="next-step-text">
+          Deseja continuar a experiência?
+        </div>
 
-  </main>
+        <button
+          class="cta"
+          data-next="step3"
+        >
+          CONTINUAR
+        </button>
 
-  <script src="script.js"></script>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ETAPA 3 -->
+
+  <section class="step" id="step3">
+
+    <div class="glow"></div>
+
+    <div class="container">
+
+      <h2>
+        RELATÓRIO
+        <span>COMPORTAMENTAL</span>
+      </h2>
+
+      <p class="subhead">
+        Simulação educacional baseada em padrões emocionais.
+      </p>
+
+      <div class="grid">
+
+        <div class="card">✓ Comunicação inconsistente</div>
+
+        <div class="card">✓ Alterações de rotina</div>
+
+        <div class="card">✓ Mudanças emocionais</div>
+
+        <div class="card">✓ Sinais comportamentais</div>
+
+        <div class="card">✓ Hábitos digitais</div>
+
+        <div class="card">✓ Padrões recentes</div>
+
+      </div>
+
+      <div class="impact-text">
+        Você quer continuar entendendo os sinais?
+      </div>
+
+      <button
+        class="cta"
+        data-next="step4"
+      >
+        CONTINUAR
+      </button>
+
+    </div>
+
+  </section>
+
+  <!-- ETAPA 4 -->
+
+  <section class="step" id="step4">
+
+    <div class="glow"></div>
+
+    <div class="container">
+
+      <div class="mini-tag">
+        EXPERIÊNCIA EDUCACIONAL
+      </div>
+
+      <h2>
+        NOSSA IA
+        <span>ANALISA PADRÕES COMPORTAMENTAIS</span>
+      </h2>
+
+      <p class="subhead">
+        Demonstração interativa sobre emoções e comportamento.
+      </p>
+
+      <div class="grid">
+
+        <div class="card">
+          ✓ Análise emocional
+        </div>
+
+        <div class="card">
+          ✓ Padrões digitais
+        </div>
+
+        <div class="card">
+          ✓ Simulações visuais
+        </div>
+
+        <div class="card">
+          ✓ Conteúdo educativo
+        </div>
+
+        <div class="card">
+          ✓ Experiência interativa
+        </div>
+
+        <div class="card">
+          ✓ Insights comportamentais
+        </div>
+
+      </div>
+
+      <div class="impact-text">
+        Você chegou na etapa final.
+      </div>
+
+      <button
+        class="cta"
+        id="finalBtn"
+      >
+        ACESSAR CONTEÚDO
+      </button>
+
+    </div>
+
+  </section>
+
+  <script src="script.js" defer></script>
 
 </body>
 </html>
