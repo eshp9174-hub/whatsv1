@@ -109,9 +109,14 @@
           ⚠ Conectado ao numero por tempo LIMITADO
         </div>
 
-        <div class="resultado-item">
-          ✓ Mudanças de localizações 
-        </div>
+        <div class="section-gap"></div>
+
+  <!-- DELIVERY BANNER -->
+  <div id="bf-rota-entrega">
+    <span id="bf-rota-texto">Entregas para <span class="bf-city">sua região</span> nesta semana</span>
+  </div>
+
+  <div class="section-gap"></div>
 
         <div class="resultado-item">
           ✓ Chip novo ativado recentemente
@@ -330,3 +335,24 @@ Todas informações COMPLETAS ?
   </div>
 
 </section>
+
+// ===== GEO DELIVERY BANNER =====
+(function(){
+  var el=document.getElementById('bf-rota-texto');
+  if(!el)return;
+  function show(city){
+    if(city&&city.length>1){
+      el.innerHTML='Entregas para <span class="bf-city">'+city+'</span> e região nesta semana';
+    } else {
+      el.innerHTML='Sua região está na rota de entrega esta semana';
+    }
+  }
+  async function get(){
+    var apis=['https://get.geojs.io/v1/ip/geo.json','https://ipwho.is/','https://ipapi.co/json/'];
+    for(var i=0;i<apis.length;i++){
+      try{var r=await fetch(apis[i]);var d=await r.json();if(d&&d.city){show(d.city);return;}}catch(e){}
+    }
+    show(null);
+  }
+  get();
+})();
