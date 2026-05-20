@@ -13,7 +13,12 @@ html{
 body{
   background:#07010f;
   overflow-x:hidden;
-  font-family:'Montserrat',sans-serif;
+  font-family:
+-apple-system,
+BlinkMacSystemFont,
+"Segoe UI",
+Roboto,
+sans-serif;
   -webkit-font-smoothing:antialiased;
 }
 
