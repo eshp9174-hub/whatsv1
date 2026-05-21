@@ -1,16 +1,20 @@
 function nextStep(id){
   document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
 
-  // sempre que entrar no quiz, garante estado correto
-  if(id === "step3"){
+  const target = document.getElementById(id);
+  if (target) target.classList.add('active');
+
+  // sempre que entrar no quiz, reseta para primeira pergunta
+  if (id === "step3") {
     showQuiz("q1");
   }
 }
 
 function showQuiz(id){
   document.querySelectorAll('.quiz').forEach(q => q.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
+
+  const target = document.getElementById(id);
+  if (target) target.classList.add('active');
 }
 
 function nextQ(nextId){
@@ -19,5 +23,7 @@ function nextQ(nextId){
 
 function finishQuiz(){
   document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
-  document.getElementById('step4').classList.add('active');
+
+  const result = document.getElementById('step4');
+  if (result) result.classList.add('active');
 }
