@@ -3,13 +3,9 @@ function nextStep(id){
   document.getElementById(id).classList.add('active');
 }
 
-function showQuiz(id){
-  document.querySelectorAll('.quiz').forEach(q => q.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-}
-
 function nextQ(nextId){
-  showQuiz(nextId);
+  document.querySelectorAll('.quiz').forEach(q => q.classList.remove('active'));
+  document.getElementById(nextId).classList.add('active');
 }
 
 function finishQuiz(){
