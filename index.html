@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-<meta charset="UTF-8"/>
+<meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Análise Comportamental</title>
+<meta name="theme-color" content="#120018"/>
 
 <link rel="stylesheet" href="style.css"/>
 </head>
@@ -19,19 +19,42 @@
 
     <h1 class="title">
       VOCÊ ESTÁ PRONTO(A) PARA ENTENDER<br>
-      <span>COMPORTAMENTOS NO RELACIONAMENTO?</span>
+      <span>COMPORTAMENTOS NO SEU RELACIONAMENTO?</span>
     </h1>
 
-    <p>Descubra padrões emocionais com base em comportamento.</p>
+    <p>
+      Conheça sinais que podem indicar mudanças emocionais no comportamento.
+    </p>
 
-    <button class="cta pulse" onclick="nextStep('step3')">
+    <button class="cta pulse" onclick="nextStep('step2')">
       QUERO DESCOBRIR AGORA
     </button>
 
   </div>
 </section>
 
-<!-- STEP 3 QUIZ -->
+<!-- STEP 2 -->
+<section class="step" id="step2">
+  <div class="glow"></div>
+
+  <div class="container">
+
+    <h2 class="title">
+      EXISTE UM PADRÃO<br>
+      <span>QUE PODE EXPLICAR ISSO</span>
+    </h2>
+
+    <p>
+      Estudos comportamentais mostram padrões repetitivos em situações assim.
+    </p>
+
+    <button class="cta pulse" onclick="nextStep('step3')">
+      ME MOSTRE COMO
+    </button>
+
+  </div>
+</section>
+
 <!-- STEP 3 QUIZ -->
 <section class="step" id="step3">
   <div class="glow"></div>
@@ -40,88 +63,55 @@
 
     <h2 class="title">RESPONDA RAPIDAMENTE</h2>
 
-    <!-- PERGUNTA 1 -->
-    <div class="quiz active" id="q1">
-      <div class="q">1. Fica defensivo(a) quando questionado(a)?</div>
+    <div class="quiz">
 
-      <div class="opt" onclick="nextQ('q2')">Isso acontece com frequência</div>
-      <div class="opt" onclick="nextQ('q2')">Já aconteceu algumas vezes</div>
-      <div class="opt" onclick="nextQ('q2')">Recentemente percebi isso</div>
-      <div class="opt" onclick="nextQ('q2')">Nunca percebi isso</div>
+      <p class="q">1. Mudança de comportamento com você?</p>
+      <label class="opt"><input type="radio" name="q1"> Frequente</label>
+      <label class="opt"><input type="radio" name="q1"> Às vezes</label>
+      <label class="opt"><input type="radio" name="q1"> Recentemente</label>
+      <label class="opt"><input type="radio" name="q1"> Nunca percebi</label>
+
+      <p class="q">2. Mudança de rotina repentina?</p>
+      <label class="opt"><input type="radio" name="q2"> Sim constante</label>
+      <label class="opt"><input type="radio" name="q2"> Algumas vezes</label>
+      <label class="opt"><input type="radio" name="q2"> Recentemente</label>
+      <label class="opt"><input type="radio" name="q2"> Não</label>
+
+      <p class="q">3. Fala sobre “liberdade”?</p>
+      <label class="opt"><input type="radio" name="q3"> Frequentemente</label>
+      <label class="opt"><input type="radio" name="q3"> Às vezes</label>
+      <label class="opt"><input type="radio" name="q3"> Começou agora</label>
+      <label class="opt"><input type="radio" name="q3"> Nunca</label>
+
     </div>
 
-    <!-- PERGUNTA 2 -->
-    <div class="quiz" id="q2">
-      <div class="q">2. Mudança de rotina repentina?</div>
-
-      <div class="opt" onclick="nextQ('q3')">Mudança constante</div>
-      <div class="opt" onclick="nextQ('q3')">Algumas vezes</div>
-      <div class="opt" onclick="nextQ('q3')">Recentemente aconteceu</div>
-      <div class="opt" onclick="nextQ('q3')">Não percebi mudança</div>
-    </div>
-
-    <!-- PERGUNTA 3 -->
-    <div class="quiz" id="q3">
-      <div class="q">3. Fala sobre separação com frequência?</div>
-
-      <div class="opt" onclick="nextQ('q4')">Frequentemente</div>
-      <div class="opt" onclick="nextQ('q4')">Algumas vezes</div>
-      <div class="opt" onclick="nextQ('q4')">Começou recentemente</div>
-      <div class="opt" onclick="nextQ('q4')">Nunca falou</div>
-    </div>
-
-    <!-- PERGUNTA 4 -->
-    <div class="quiz" id="q4">
-      <div class="q">4. Fala muito sobre “liberdade”?</div>
-
-      <div class="opt" onclick="nextQ('q5')">Sempre</div>
-      <div class="opt" onclick="nextQ('q5')">Às vezes</div>
-      <div class="opt" onclick="nextQ('q5')">Recentemente começou</div>
-      <div class="opt" onclick="nextQ('q5')">Nunca comentou</div>
-    </div>
-
-    <!-- PERGUNTA 5 -->
-    <div class="quiz" id="q5">
-      <div class="q">5. Defende alguém específico demais?</div>
-
-      <div class="opt" onclick="nextQ('q6')">Com frequência</div>
-      <div class="opt" onclick="nextQ('q6')">Algumas vezes</div>
-      <div class="opt" onclick="nextQ('q6')">Recentemente percebi isso</div>
-      <div class="opt" onclick="nextQ('q6')">Nunca percebi</div>
-    </div>
-
-    <!-- PERGUNTA 6 -->
-    <div class="quiz" id="q6">
-      <div class="q">6. Contradições em detalhes simples?</div>
-
-      <div class="opt" onclick="finishQuiz()">Acontece várias vezes</div>
-      <div class="opt" onclick="finishQuiz()">Algumas vezes</div>
-      <div class="opt" onclick="finishQuiz()">Recentemente percebi</div>
-      <div class="opt" onclick="finishQuiz()">Nunca percebi</div>
-    </div>
+    <button class="cta pulse" onclick="nextStep('step4')">
+      CONTINUAR
+    </button>
 
   </div>
 </section>
-  
+
 <!-- STEP 4 -->
 <section class="step" id="step4">
   <div class="glow"></div>
 
   <div class="container">
 
-    <div class="badge">🔥 24H - 732 PESSOAS</div>
+    <div class="badge pulse">
+      🔥 24H / 732 PESSOAS
+    </div>
 
     <h2 class="title">
-      EXISTE UM PADRÃO IDENTIFICADO
+      EXISTE UM PADRÃO CLARO
     </h2>
 
     <p>
-      Nas últimas 24 horas, 732 pessoas passaram por respostas semelhantes às suas…
-      isso não é coincidência.
+      Nas últimas 24 horas, 732 pessoas passaram por respostas semelhantes às suas.
     </p>
 
     <div class="pulse-box">
-      PADRÃO COMPORTAMENTAL DETECTADO
+      PADRÃO IDENTIFICADO
     </div>
 
     <button class="cta pulse" onclick="nextStep('step5')">
@@ -139,13 +129,26 @@
 
     <h2 class="title">
       EXISTE UMA FORMA MAIS CLARA<br>
-      <span>DE ENTENDER ISSO</span>
+      <span>DE ENTENDER ESSES SINAIS</span>
     </h2>
 
-    <p>Um método simples para interpretar padrões emocionais.</p>
+    <p>
+      Um método simples para organizar padrões emocionais.
+    </p>
+
+    <div class="price">
+      <del>R$ 89,90</del>
+      <strong>R$ 37,90</strong>
+    </div>
+
+    <ul>
+      <li>✔ Entenda padrões comportamentais</li>
+      <li>✔ Pare de interpretar sinais isolados</li>
+      <li>✔ Reduza dúvidas constantes</li>
+    </ul>
 
     <a class="cta pulse" href="https://SEU-CHECKOUT.com">
-      QUERO ACESSAR A SOLUÇÃO AGORA
+      QUERO ACESSAR AGORA
     </a>
 
   </div>
