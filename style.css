@@ -214,3 +214,24 @@ p{
   50%{transform:translateY(-4px);}
   100%{transform:translateY(0);}
 }
+
+.glow{
+  pointer-events:none !important;
+  z-index:0;
+}
+
+.step{
+  position:relative;
+  z-index:1;
+}
+
+.container{
+  position:relative;
+  z-index:2;
+}
+
+.cta, .opt{
+  position:relative;
+  z-index:10;
+  pointer-events:auto;
+}
