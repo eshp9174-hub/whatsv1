@@ -332,26 +332,76 @@ p{
 /* ===== CTA MAIS PREMIUM ===== */
 .cta{
   margin-top:22px;
-  padding:16px;
-  border-radius:16px;
+  padding:18px 20px;
+  border-radius:18px;
 
   font-weight:1000;
-  letter-spacing:1px;
+  font-size:16px;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
 
   background:linear-gradient(45deg,#6a00f4,#c77dff,#7b2cbf);
   background-size:200% 200%;
 
   animation:gradientMove 3s ease infinite, pulse 1.4s infinite;
 
-  border:none;
+  border:1px solid rgba(255,255,255,0.15);
   color:#fff;
   cursor:pointer;
 
-  box-shadow:0 0 30px rgba(199,125,255,.25);
+  box-shadow:
+    0 0 25px rgba(199,125,255,.25),
+    0 0 60px rgba(123,44,191,.15);
+
+  position:relative;
+  overflow:hidden;
+
+  transition:0.2s ease;
+}
+
+/* brilho passando por cima (efeito premium) */
+.cta::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-120%;
+  width:120%;
+  height:100%;
+
+  background:linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.25),
+    transparent
+  );
+
+  animation:shine 2.8s infinite;
+}
+
+@keyframes shine{
+  0%{left:-120%;}
+  100%{left:120%;}
+}
+
+.cta:hover{
+  transform:scale(1.03);
+  box-shadow:
+    0 0 35px rgba(199,125,255,.35),
+    0 0 80px rgba(123,44,191,.25);
+}
+
+.cta:active{
+  transform:scale(0.98);
 }
 
 @keyframes gradientMove{
   0%{background-position:0% 50%;}
   50%{background-position:100% 50%;}
   100%{background-position:0% 50%;}
+}
+
+@keyframes pulse{
+  0%{transform:scale(1);}
+  50%{transform:scale(1.04);}
+  100%{transform:scale(1);}
 }
