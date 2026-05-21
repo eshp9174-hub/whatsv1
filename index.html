@@ -56,6 +56,7 @@
 </section>
 
 <!-- STEP 3 QUIZ -->
+<!-- STEP 3 QUIZ -->
 <section class="step" id="step3">
   <div class="glow"></div>
 
@@ -63,31 +64,41 @@
 
     <h2 class="title">RESPONDA RAPIDAMENTE</h2>
 
-    <div class="quiz">
+    <!-- PERGUNTA 1 -->
+    <div class="quiz active" id="q1">
 
       <p class="q">1. Mudança de comportamento com você?</p>
-      <label class="opt"><input type="radio" name="q1"> Frequente</label>
-      <label class="opt"><input type="radio" name="q1"> Às vezes</label>
-      <label class="opt"><input type="radio" name="q1"> Recentemente</label>
-      <label class="opt"><input type="radio" name="q1"> Nunca percebi</label>
 
-      <p class="q">2. Mudança de rotina repentina?</p>
-      <label class="opt"><input type="radio" name="q2"> Sim constante</label>
-      <label class="opt"><input type="radio" name="q2"> Algumas vezes</label>
-      <label class="opt"><input type="radio" name="q2"> Recentemente</label>
-      <label class="opt"><input type="radio" name="q2"> Não</label>
-
-      <p class="q">3. Fala sobre “liberdade”?</p>
-      <label class="opt"><input type="radio" name="q3"> Frequentemente</label>
-      <label class="opt"><input type="radio" name="q3"> Às vezes</label>
-      <label class="opt"><input type="radio" name="q3"> Começou agora</label>
-      <label class="opt"><input type="radio" name="q3"> Nunca</label>
+      <div class="opt" onclick="nextQ('q2')">Frequente</div>
+      <div class="opt" onclick="nextQ('q2')">Às vezes</div>
+      <div class="opt" onclick="nextQ('q2')">Recentemente</div>
+      <div class="opt" onclick="nextQ('q2')">Nunca percebi</div>
 
     </div>
 
-    <button class="cta pulse" onclick="nextStep('step4')">
-      CONTINUAR
-    </button>
+    <!-- PERGUNTA 2 -->
+    <div class="quiz" id="q2">
+
+      <p class="q">2. Mudança de rotina repentina?</p>
+
+      <div class="opt" onclick="nextQ('q3')">Sim constante</div>
+      <div class="opt" onclick="nextQ('q3')">Algumas vezes</div>
+      <div class="opt" onclick="nextQ('q3')">Recentemente</div>
+      <div class="opt" onclick="nextQ('q3')">Não</div>
+
+    </div>
+
+    <!-- PERGUNTA 3 -->
+    <div class="quiz" id="q3">
+
+      <p class="q">3. Fala sobre “liberdade”?</p>
+
+      <div class="opt" onclick="finishQuiz()">Frequentemente</div>
+      <div class="opt" onclick="finishQuiz()">Às vezes</div>
+      <div class="opt" onclick="finishQuiz()">Começou agora</div>
+      <div class="opt" onclick="finishQuiz()">Nunca</div>
+
+    </div>
 
   </div>
 </section>
