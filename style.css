@@ -103,9 +103,12 @@ p{
 }
 
 /* ===== QUIZ ===== */
-.quiz{
-  margin-top:25px;
-  text-align:left;
+..quiz{
+  display:none;
+}
+
+.quiz.active{
+  display:block;
 }
 
 /* QUESTION */
