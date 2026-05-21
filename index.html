@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Análise Comportamental</title>
-  <meta name="theme-color" content="#120018"/>
-
-  <link rel="stylesheet" href="style.css"/>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Leitura Comportamental</title>
+<link rel="stylesheet" href="style.css"/>
 </head>
 
 <body>
@@ -16,16 +14,14 @@
   <div class="glow"></div>
 
   <div class="container">
-    <h1>
+    <h1 class="title">
       VOCÊ ESTÁ PRONTO(A) PARA ENTENDER<br>
-      <span>COMPORTAMENTOS NO SEU RELACIONAMENTO?</span>
+      <span>COMPORTAMENTOS NO RELACIONAMENTO?</span>
     </h1>
 
-    <p>
-      Conheça sinais que podem indicar mudanças emocionais no comportamento.
-    </p>
+    <p>Descubra padrões emocionais que passam despercebidos.</p>
 
-    <button class="cta" onclick="nextStep('step2')">
+    <button class="cta pulse" onclick="nextStep('step2')">
       QUERO DESCOBRIR AGORA
     </button>
   </div>
@@ -36,18 +32,18 @@
   <div class="glow"></div>
 
   <div class="container">
-    <h2>
+
+    <h2 class="title">
       EXISTE UM PADRÃO<br>
-      <span>QUE PODE EXPLICAR ISSO</span>
+      <span>CLARO NESSE TIPO DE SITUAÇÃO</span>
     </h2>
 
-    <p>
-      Estudos comportamentais mostram que certos sinais aparecem em sequência previsível.
-    </p>
+    <p>Toque para continuar a análise.</p>
 
-    <button class="cta" onclick="nextStep('step3')">
-      ME MOSTRE COMO
+    <button class="cta pulse" onclick="nextStep('step3')">
+      ME MOSTRE
     </button>
+
   </div>
 </section>
 
@@ -57,58 +53,41 @@
 
   <div class="container">
 
-    <h2>RESPONDA RAPIDAMENTE</h2>
+    <h2 class="title">
+      RESPONDA RAPIDAMENTE
+    </h2>
 
     <div class="quiz">
 
-      <p>1. Mudança de comportamento com você?</p>
-      <label><input type="radio" name="q1"> Frequente</label>
-      <label><input type="radio" name="q1"> Às vezes</label>
-      <label><input type="radio" name="q1"> Recentemente</label>
-      <label><input type="radio" name="q1"> Nunca percebi</label>
-
-      <p>2. Mudança de rotina repentina?</p>
-      <label><input type="radio" name="q2"> Sim constante</label>
-      <label><input type="radio" name="q2"> Algumas vezes</label>
-      <label><input type="radio" name="q2"> Recentemente</label>
-      <label><input type="radio" name="q2"> Não</label>
-
-      <p>3. Fala sobre “liberdade”?</p>
-      <label><input type="radio" name="q3"> Frequentemente</label>
-      <label><input type="radio" name="q3"> Às vezes</label>
-      <label><input type="radio" name="q3"> Começou agora</label>
-      <label><input type="radio" name="q3"> Nunca</label>
+      <div class="q">1. Ele(a) fica defensivo quando questionado?</div>
+      <div class="opt" onclick="nextStep('step4')">Isso acontece com frequência</div>
+      <div class="opt" onclick="nextStep('step4')">Já aconteceu algumas vezes</div>
+      <div class="opt" onclick="nextStep('step4')">Recentemente notei isso</div>
+      <div class="opt" onclick="nextStep('step4')">Nunca percebi</div>
 
     </div>
-
-    <button class="cta" onclick="nextStep('step4')">
-      CONTINUAR
-    </button>
 
   </div>
 </section>
 
-<!-- STEP 4 PROVA SOCIAL -->
+<!-- STEP 4 -->
 <section class="step" id="step4">
   <div class="glow"></div>
 
   <div class="container">
 
-    <div class="badge">
-      🔥 24H / 732 PESSOAS
-    </div>
+    <div class="badge">🔥 24H - 732 PESSOAS</div>
 
-    <h2>
-      EXISTE UM PADRÃO CLARO
+    <h2 class="title">
+      EXISTE UM PADRÃO IDENTIFICADO
     </h2>
 
     <p>
-      Nas últimas 24 horas, 732 pessoas passaram por respostas semelhantes às suas.
-      Isso revela um padrão comportamental consistente.
+      Nas últimas 24 horas, 732 pessoas responderam de forma semelhante à sua.
     </p>
 
     <div class="pulse-box">
-      PADRÃO IDENTIFICADO
+      PADRÃO COMPORTAMENTAL ATIVO
     </div>
 
     <button class="cta pulse" onclick="nextStep('step5')">
@@ -118,35 +97,29 @@
   </div>
 </section>
 
-<!-- STEP 5 OFERTA -->
+<!-- STEP 5 -->
 <section class="step" id="step5">
   <div class="glow"></div>
 
   <div class="container">
 
-    <h2>
+    <h2 class="title">
       EXISTE UMA FORMA MAIS CLARA<br>
-      <span>DE ENTENDER ESSES SINAIS</span>
+      <span>DE ENTENDER ISSO</span>
     </h2>
 
-    <p>
-      Um método simples para organizar sinais e entender padrões emocionais.
-    </p>
+    <p>Um método simples de leitura de padrões emocionais.</p>
 
-    <div class="price">
-      <del>R$ 89,90</del>
-      <strong>R$ 37,90</strong>
-    </div>
-
-    <ul>
-      <li>✔ Entenda padrões comportamentais</li>
-      <li>✔ Pare de interpretar sinais isolados</li>
-      <li>✔ Reduza dúvidas constantes</li>
-    </ul>
-
-    <a class="cta" href="https://SEU-CHECKOUT.com">
-      QUERO ACESSAR AGORA
+    <!-- BOTÃO AGORA EM CIMA DO TEXTO (CORRIGIDO) -->
+    <a class="cta pulse" href="https://SEU-CHECKOUT.com">
+      QUERO ACESSAR A SOLUÇÃO AGORA
     </a>
+
+    <div class="offer-text">
+      ✔ Entenda padrões comportamentais<br>
+      ✔ Pare de interpretar sinais isolados<br>
+      ✔ Tenha mais clareza emocional
+    </div>
 
   </div>
 </section>
