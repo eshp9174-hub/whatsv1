@@ -1,331 +1,156 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-
   <meta charset="UTF-8" />
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Análise Comportamental</title>
+  <meta name="theme-color" content="#120018"/>
 
-  <meta
-    name="description"
-    content="Experiência educacional e comportamental interativa."
-  />
-
-  <meta name="theme-color" content="#07010f" />
-
-  <!-- FONT -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;900&display=swap"
-    rel="stylesheet"
-  />
-
-  <link rel="stylesheet" href="style.css" />
-
+  <link rel="stylesheet" href="style.css"/>
 </head>
 
 <body>
 
-  <!-- ETAPA 1 -->
-
-  <section class="step active" id="step1">
-
-    <div class="glow"></div>
-
-    <div class="container">
-
-      <h1>
-        VOCÊ ESTÁ PRONTO(A) PARA ENTENDER
-        <span>PADRÕES COMPORTAMENTAIS?</span>
-      </h1>
-
-      <p>
-        Uma experiência educacional sobre comportamento digital.
-      </p>
-
-      <button class="cta" data-next="step2">
-        COMEÇAR EXPERIÊNCIA
-      </button>
-
-    </div>
-
-  </section>
-
-  <!-- ETAPA 2 -->
-
-  <section class="step" id="step2">
-
-    <div class="glow"></div>
-
-    <div class="container">
-
-      <h2>
-        SIMULE UMA
-        <span>ANÁLISE COMPORTAMENTAL</span>
-      </h2>
-
-      <p class="subhead">
-        Experiência ilustrativa e educacional.
-      </p>
-
-      <div class="form-box">
-
-        <input
-          type="tel"
-          id="phone"
-          maxlength="15"
-          placeholder="(11) 99999-9999"
-        >
-
-        <button id="consultarBtn">
-          INICIAR ANÁLISE
-        </button>
-
-      </div>
-
-      <div class="loader-area" id="loaderArea">
-
-        <div class="loading-text">
-          Processando padrões...
-        </div>
-
-        <div class="loader-bar">
-          <div class="loader-fill"></div>
-        </div>
-
-      </div>
-
-      <div class="resultado-box" id="resultadoBox">
-
-        <div class="resultado-title">
-          ✓ Relatório ilustrativo concluído
-        </div>
-
-        <div class="resultado-item">
-          ✓ Mudanças de rotina percebidas
-        </div>
-
-        <div class="resultado-item">
-          ✓ Padrões digitais identificados
-        </div>
-
-        <div class="resultado-item">
-          ✓ Comportamentos inconsistentes simulados
-        </div>
-
-        <div class="resultado-alert">
-          Conteúdo totalmente educacional e demonstrativo.
-        </div>
-
-      </div>
-
-      <div
-        class="next-step-area"
-        id="nextStepArea"
-      >
-
-        <div class="next-step-text">
-          Deseja continuar a experiência?
-        </div>
-
-        <button
-          class="cta"
-          data-next="step3"
-        >
-          CONTINUAR
-        </button>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- ETAPA 3 -->
-
-  <section class="step" id="step3">
-
-    <div class="glow"></div>
-
-    <div class="container">
-
-      <h2>
-        RELATÓRIO
-        <span>COMPORTAMENTAL</span>
-      </h2>
-
-      <p class="subhead">
-        Simulação educacional baseada em padrões emocionais.
-      </p>
-
-      <div class="grid">
-
-        <div class="card">✓ Comunicação inconsistente</div>
-
-        <div class="card">✓ Alterações de rotina</div>
-
-        <div class="card">✓ Mudanças emocionais</div>
-
-        <div class="card">✓ Sinais comportamentais</div>
-
-        <div class="card">✓ Hábitos digitais</div>
-
-        <div class="card">✓ Padrões recentes</div>
-
-      </div>
-
-      <div class="impact-text">
-        Você quer continuar entendendo os sinais?
-      </div>
-
-      <button
-        class="cta"
-        data-next="step4"
-      >
-        CONTINUAR
-      </button>
-
-    </div>
-
-  </section>
-
-  <!-- ETAPA 4 -->
-
-  <section class="step" id="step4">
-
-    <div class="glow"></div>
-
-    <div class="container">
-
-      <div class="mini-tag">
-        EXPERIÊNCIA EDUCACIONAL
-      </div>
-
-      <h2>
-        NOSSA IA
-        <span>ANALISA PADRÕES COMPORTAMENTAIS</span>
-      </h2>
-
-      <p class="subhead">
-        Demonstração interativa sobre emoções e comportamento.
-      </p>
-
-      <div class="grid">
-
-        <div class="card">
-          ✓ Análise emocional
-        </div>
-
-        <div class="card">
-          ✓ Padrões digitais
-        </div>
-
-        <div class="card">
-          ✓ Simulações visuais
-        </div>
-
-        <div class="card">
-          ✓ Conteúdo educativo
-        </div>
-
-        <div class="card">
-          ✓ Experiência interativa
-        </div>
-
-        <div class="card">
-          ✓ Insights comportamentais
-        </div>
-
-      </div>
-
-      <div class="impact-text">
-        Você chegou na etapa final.
-      </div>
-
-      <button
-  class="cta"
-  data-next="step5"
->
-  ACESSAR CONTEÚDO
-</button>
-
-    </div>
-
-  </section>
-
-  <script src="script.js" defer></script>
-
-</body>
-</html>
-
-<!-- ETAPA FINAL CTA -->
-
-<section class="step" id="step5">
-
+<!-- STEP 1 -->
+<section class="step active" id="step1">
   <div class="glow"></div>
 
-  <div class="container offer-container">
+  <div class="container">
+    <h1>
+      VOCÊ ESTÁ PRONTO(A) PARA ENTENDER<br>
+      <span>COMPORTAMENTOS NO SEU RELACIONAMENTO?</span>
+    </h1>
 
-    <div class="offer-alert">
-      COMECE AGORA
+    <p>
+      Conheça sinais que podem indicar mudanças emocionais no comportamento.
+    </p>
+
+    <button class="cta" onclick="nextStep('step2')">
+      QUERO DESCOBRIR AGORA
+    </button>
+  </div>
+</section>
+
+<!-- STEP 2 -->
+<section class="step" id="step2">
+  <div class="glow"></div>
+
+  <div class="container">
+    <h2>
+      EXISTE UM PADRÃO<br>
+      <span>QUE PODE EXPLICAR ISSO</span>
+    </h2>
+
+    <p>
+      Estudos comportamentais mostram que certos sinais aparecem em sequência previsível.
+    </p>
+
+    <button class="cta" onclick="nextStep('step3')">
+      ME MOSTRE COMO
+    </button>
+  </div>
+</section>
+
+<!-- STEP 3 QUIZ -->
+<section class="step" id="step3">
+  <div class="glow"></div>
+
+  <div class="container">
+
+    <h2>RESPONDA RAPIDAMENTE</h2>
+
+    <div class="quiz">
+
+      <p>1. Mudança de comportamento com você?</p>
+      <label><input type="radio" name="q1"> Frequente</label>
+      <label><input type="radio" name="q1"> Às vezes</label>
+      <label><input type="radio" name="q1"> Recentemente</label>
+      <label><input type="radio" name="q1"> Nunca percebi</label>
+
+      <p>2. Mudança de rotina repentina?</p>
+      <label><input type="radio" name="q2"> Sim constante</label>
+      <label><input type="radio" name="q2"> Algumas vezes</label>
+      <label><input type="radio" name="q2"> Recentemente</label>
+      <label><input type="radio" name="q2"> Não</label>
+
+      <p>3. Fala sobre “liberdade”?</p>
+      <label><input type="radio" name="q3"> Frequentemente</label>
+      <label><input type="radio" name="q3"> Às vezes</label>
+      <label><input type="radio" name="q3"> Começou agora</label>
+      <label><input type="radio" name="q3"> Nunca</label>
+
+    </div>
+
+    <button class="cta" onclick="nextStep('step4')">
+      CONTINUAR
+    </button>
+
+  </div>
+</section>
+
+<!-- STEP 4 PROVA SOCIAL -->
+<section class="step" id="step4">
+  <div class="glow"></div>
+
+  <div class="container">
+
+    <div class="badge">
+      🔥 24H / 732 PESSOAS
     </div>
 
     <h2>
-      DESCUBRA MAIS
-      <span>SOBRE COMPORTAMENTO HUMANO</span>
+      EXISTE UM PADRÃO CLARO
     </h2>
 
-    <div class="price-box">
+    <p>
+      Nas últimas 24 horas, 732 pessoas passaram por respostas semelhantes às suas.
+      Isso revela um padrão comportamental consistente.
+    </p>
 
-      <div class="old-price">
-        De R$ 89,90
-      </div>
-
-      <div class="new-price">
-        R$ 37,90
-      </div>
-
-      <div class="instant-access">
-        ✓ Comece hoje mesmo a estudar comportamento
-      </div>
-
+    <div class="pulse-box">
+      PADRÃO IDENTIFICADO
     </div>
 
-    <div class="offer-benefits">
+    <button class="cta pulse" onclick="nextStep('step5')">
+      QUERO ENTENDER ISSO
+    </button>
 
-      <div class="offer-item">
-        ✓ Aprenda leitura emocional
-      </div>
+  </div>
+</section>
 
-      <div class="offer-item">
-        ✓ Desenvolva conversas mais maduras
-      </div>
+<!-- STEP 5 OFERTA -->
+<section class="step" id="step5">
+  <div class="glow"></div>
 
-      <div class="offer-item">
-        ✓ Entenda padrões comportamentais
-      </div>
+  <div class="container">
 
+    <h2>
+      EXISTE UMA FORMA MAIS CLARA<br>
+      <span>DE ENTENDER ESSES SINAIS</span>
+    </h2>
+
+    <p>
+      Um método simples para organizar sinais e entender padrões emocionais.
+    </p>
+
+    <div class="price">
+      <del>R$ 89,90</del>
+      <strong>R$ 37,90</strong>
     </div>
 
-    <a
-      href="https://SEU-CHECKOUT.com"
-      class="offer-cta"
-    >
+    <ul>
+      <li>✔ Entenda padrões comportamentais</li>
+      <li>✔ Pare de interpretar sinais isolados</li>
+      <li>✔ Reduza dúvidas constantes</li>
+    </ul>
+
+    <a class="cta" href="https://SEU-CHECKOUT.com">
       QUERO ACESSAR AGORA
     </a>
 
-    <div class="offer-micro">
-      Comece aprender sobre comportamento hoje mesmo
-    </div>
-
   </div>
-
 </section>
+
+<script src="script.js"></script>
+</body>
+</html>
