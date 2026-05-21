@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Leitura Comportamental</title>
-<link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Análise Comportamental</title>
+
+  <link rel="stylesheet" href="style.css"/>
 </head>
 
 <body>
@@ -19,7 +21,7 @@
       <span>COMPORTAMENTOS NO RELACIONAMENTO?</span>
     </h1>
 
-    <p>Descubra padrões emocionais que passam despercebidos.</p>
+    <p>Descubra sinais e padrões emocionais com mais clareza.</p>
 
     <button class="cta pulse" onclick="nextStep('step2')">
       QUERO DESCOBRIR AGORA
@@ -35,13 +37,13 @@
 
     <h2 class="title">
       EXISTE UM PADRÃO<br>
-      <span>CLARO NESSE TIPO DE SITUAÇÃO</span>
+      <span>QUE SE REPETE EM MUITOS CASOS</span>
     </h2>
 
-    <p>Toque para continuar a análise.</p>
+    <p>Alguns comportamentos seguem uma lógica previsível.</p>
 
     <button class="cta pulse" onclick="nextStep('step3')">
-      ME MOSTRE
+      ME MOSTRE COMO
     </button>
 
   </div>
@@ -53,17 +55,52 @@
 
   <div class="container">
 
-    <h2 class="title">
-      RESPONDA RAPIDAMENTE
-    </h2>
+    <h2 class="title">RESPONDA RAPIDAMENTE</h2>
 
-    <div class="quiz">
+    <!-- PERGUNTA 1 -->
+    <div class="quiz" id="q1">
 
       <div class="q">1. Ele(a) fica defensivo quando questionado?</div>
-      <div class="opt" onclick="nextStep('step4')">Isso acontece com frequência</div>
-      <div class="opt" onclick="nextStep('step4')">Já aconteceu algumas vezes</div>
-      <div class="opt" onclick="nextStep('step4')">Recentemente notei isso</div>
-      <div class="opt" onclick="nextStep('step4')">Nunca percebi</div>
+
+      <div class="opt" onclick="nextQ('q2')">
+        Isso acontece com frequência
+      </div>
+
+      <div class="opt" onclick="nextQ('q2')">
+        Já aconteceu algumas vezes
+      </div>
+
+      <div class="opt" onclick="nextQ('q2')">
+        Recentemente notei isso
+      </div>
+
+      <div class="opt" onclick="nextQ('q2')">
+        Nunca percebi isso
+      </div>
+
+    </div>
+
+    <!-- PERGUNTA 2 -->
+    <div class="quiz hidden" id="q2">
+
+      <div class="q">2. Mudança de rotina repentina?</div>
+
+      <div class="opt" onclick="nextQ('q3')">Sim, constante</div>
+      <div class="opt" onclick="nextQ('q3')">Algumas vezes</div>
+      <div class="opt" onclick="nextQ('q3')">Recentemente</div>
+      <div class="opt" onclick="nextQ('q3')">Não percebi</div>
+
+    </div>
+
+    <!-- PERGUNTA 3 -->
+    <div class="quiz hidden" id="q3">
+
+      <div class="q">3. Fala sobre “liberdade” com frequência?</div>
+
+      <div class="opt" onclick="finishQuiz()">Frequentemente</div>
+      <div class="opt" onclick="finishQuiz()">Às vezes</div>
+      <div class="opt" onclick="finishQuiz()">Começou recentemente</div>
+      <div class="opt" onclick="finishQuiz()">Nunca</div>
 
     </div>
 
@@ -83,7 +120,8 @@
     </h2>
 
     <p>
-      Nas últimas 24 horas, 732 pessoas responderam de forma semelhante à sua.
+      Nas últimas 24 horas, 732 pessoas responderam de forma semelhante.
+      Isso revela um padrão comportamental recorrente.
     </p>
 
     <div class="pulse-box">
@@ -108,9 +146,10 @@
       <span>DE ENTENDER ISSO</span>
     </h2>
 
-    <p>Um método simples de leitura de padrões emocionais.</p>
+    <p>
+      Um método simples para organizar sinais e entender padrões emocionais.
+    </p>
 
-    <!-- BOTÃO AGORA EM CIMA DO TEXTO (CORRIGIDO) -->
     <a class="cta pulse" href="https://SEU-CHECKOUT.com">
       QUERO ACESSAR A SOLUÇÃO AGORA
     </a>
@@ -125,5 +164,6 @@
 </section>
 
 <script src="script.js"></script>
+
 </body>
 </html>
