@@ -356,10 +356,14 @@ p{
   position:relative;
   overflow:hidden;
 
+  z-index:2; /* 🔥 garante que fica acima de tudo */
+  pointer-events:auto; /* 🔥 garante clique */
+  display:inline-block;
+
   transition:0.2s ease;
 }
 
-/* brilho passando por cima (efeito premium) */
+/* brilho */
 .cta::before{
   content:"";
   position:absolute;
@@ -376,8 +380,22 @@ p{
   );
 
   animation:shine 2.8s infinite;
+
+  z-index:0; /* 🔥 não bloqueia clique */
+  pointer-events:none; /* 🔥 NÃO interfere no clique */
 }
 
+/* texto sempre acima do brilho */
+.cta{
+  position:relative;
+}
+
+.cta *{
+  position:relative;
+  z-index:3;
+}
+
+/* animações */
 @keyframes shine{
   0%{left:-120%;}
   100%{left:120%;}
@@ -385,9 +403,6 @@ p{
 
 .cta:hover{
   transform:scale(1.03);
-  box-shadow:
-    0 0 35px rgba(199,125,255,.35),
-    0 0 80px rgba(123,44,191,.25);
 }
 
 .cta:active{
