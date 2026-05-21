@@ -4,7 +4,7 @@ function nextStep(id){
 }
 
 function nextQ(nextId){
-  document.querySelectorAll('#step3 .quiz').forEach(q => q.classList.add('hidden'));
+  document.querySelectorAll('.quiz').forEach(q => q.classList.add('hidden'));
   document.getElementById(nextId).classList.remove('hidden');
 }
 
