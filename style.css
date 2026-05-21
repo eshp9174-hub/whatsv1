@@ -34,28 +34,7 @@ body{
   z-index:2;
 }
 
-/* ===== TITLES ===== */
-.title{
-  font-size:28px;
-  font-weight:900;
-  letter-spacing:0.5px;
-  line-height:1.3;
-  text-shadow:0 0 25px rgba(199,125,255,.25);
-}
-
-.title span{
-  color:#c77dff;
-  text-shadow:0 0 25px #c77dff;
-}
-
-/* ===== TEXT ===== */
-p{
-  margin-top:12px;
-  opacity:.8;
-  font-size:15px;
-}
-
-/* ===== BACK GLOW ===== */
+/* ===== GLOW ===== */
 .glow{
   position:absolute;
   width:500px;
@@ -69,259 +48,14 @@ p{
   z-index:0;
 }
 
-/* ===== CTA BUTTON ===== */
-.cta{
-  display:inline-block;
-  margin-top:20px;
-  background:linear-gradient(45deg,#7b2cbf,#c77dff);
-  color:#fff;
-  padding:16px;
-  border-radius:14px;
-  font-weight:900;
-  text-decoration:none;
-  width:100%;
-  border:none;
-  cursor:pointer;
-  box-shadow:0 0 25px rgba(199,125,255,.25);
-  transition:.2s;
-}
-
-.cta:hover{
-  transform:scale(1.02);
-  filter:brightness(1.1);
-}
-
-/* ===== PULSE ANIMATION ===== */
-.pulse{
-  animation:pulse 1.3s infinite;
-}
-
-@keyframes pulse{
-  0%{transform:scale(1);}
-  50%{transform:scale(1.04);}
-  100%{transform:scale(1);}
-}
-
-/* ===== QUIZ ===== */
-.quiz { display: none; }
-.quiz.active { display: block; }
-
-/* PERGUNTA */
-.q{
-  font-size:18px;
-  font-weight:900;
-  margin:20px 0 15px;
-  text-shadow:0 0 20px rgba(199,125,255,.25);
-}
-
-/* OPÇÕES DO QUIZ (BONITO + CLICÁVEL) */
-.opt{
-  display:block;
-  padding:14px;
-  margin:10px 0;
-  border-radius:14px;
-  border:1px solid rgba(199,125,255,.25);
-  background:rgba(255,255,255,0.03);
-  cursor:pointer;
-
-  transition:.2s;
-  user-select:none;
-
-  font-weight:600;
-}
-
-.opt:hover{
-  transform:scale(1.02);
-  border-color:#c77dff;
-  box-shadow:0 0 20px rgba(199,125,255,.25);
-}
-
-.opt:active{
-  transform:scale(0.98);
-  background:rgba(199,125,255,.15);
-}
-
-/* CTA PULSANTE */
-.pulse{
-  animation:pulse 1.3s infinite;
-}
-
-@keyframes pulse{
-  0%{transform:scale(1);}
-  50%{transform:scale(1.04);}
-  100%{transform:scale(1);}
-}
-
-/* BADGE */
-.badge{
-  background:linear-gradient(45deg,#3a0060,#7b2cbf);
-  padding:12px 16px;
-  border-radius:14px;
-  font-weight:900;
-  display:inline-block;
-  margin-bottom:15px;
-  animation:float 2s infinite ease-in-out;
-}
-
-@keyframes float{
-  0%{transform:translateY(0);}
-  50%{transform:translateY(-4px);}
-  100%{transform:translateY(0);}
-}
-
-/* PULSE BOX */
-.pulse-box{
-  margin-top:20px;
-  padding:14px;
-  border-radius:14px;
-  border:1px solid #c77dff;
-  animation:pulse 1.5s infinite;
-  font-weight:800;
-}
-
-/* QUESTION */
-.q{
-  font-weight:800;
-  margin:18px 0 10px;
-  font-size:15px;
-}
-
-/* OPTIONS (CLICÁVEL 100% FUNCIONAL) */
-.opt{
-  padding:14px;
-  margin:10px 0;
-  border:1px solid rgba(199,125,255,.35);
-  border-radius:12px;
-  cursor:pointer;
-  transition:.2s ease;
-  background:rgba(255,255,255,0.02);
-
-  user-select:none;
-  -webkit-user-select:none;
-  -webkit-tap-highlight-color:transparent;
-  touch-action:manipulation;
-  position:relative;
-  z-index:5;
-}
-
-/* HOVER + TOUCH EFFECT */
-.opt:hover{
-  background:rgba(199,125,255,.15);
-  transform:scale(1.02);
-  box-shadow:0 0 18px rgba(199,125,255,.15);
-}
-
-/* ACTIVE CLICK FEEL */
-.opt:active{
-  transform:scale(0.98);
-  background:rgba(199,125,255,.25);
-}
-
-/* ===== BADGE ===== */
-.badge{
-  display:inline-block;
-  background:linear-gradient(45deg,#3a0060,#7b2cbf);
-  padding:12px 16px;
-  border-radius:14px;
-  margin-bottom:18px;
-  font-weight:900;
-  font-size:13px;
-  letter-spacing:1px;
-
-  box-shadow:
-    0 0 20px rgba(199,125,255,.25),
-    inset 0 0 10px rgba(255,255,255,.05);
-
-  animation:floatGlow 2s infinite ease-in-out;
-}
-
-@keyframes floatGlow{
-  0%{transform:translateY(0);}
-  50%{transform:translateY(-4px);}
-  100%{transform:translateY(0);}
-}
-
-/* ===== CARD / BALÕES MELHORADOS ===== */
-.opt{
-  padding:16px;
-  margin:12px 0;
-  border-radius:14px;
-  cursor:pointer;
-  background:rgba(255,255,255,0.03);
-
-  border:1px solid rgba(199,125,255,.25);
-
-  transition:.25s ease;
-
-  backdrop-filter: blur(8px);
-
-  user-select:none;
-  -webkit-user-select:none;
-  -webkit-tap-highlight-color:transparent;
-  touch-action:manipulation;
-
-  position:relative;
-  overflow:hidden;
-}
-
-/* brilho interno animado */
-.opt::before{
-  content:"";
-  position:absolute;
-  top:0;
-  left:-100%;
-  width:100%;
-  height:100%;
-  background:linear-gradient(90deg,transparent,rgba(199,125,255,.15),transparent);
-  transition:0.5s;
-}
-
-.opt:hover::before{
-  left:100%;
-}
-
-.opt:hover{
-  transform:scale(1.03);
-  border-color:#c77dff;
-  box-shadow:0 0 20px rgba(199,125,255,.25);
-}
-
-/* clique */
-.opt:active{
-  transform:scale(0.98);
-  background:rgba(199,125,255,.2);
-}
-
-/* ===== PULSE BOX MAIS BONITO ===== */
-.pulse-box{
-  margin-top:22px;
-  padding:16px;
-  border-radius:16px;
-  border:1px solid #c77dff;
-  background:rgba(123,44,191,.08);
-
-  font-weight:900;
-  letter-spacing:1px;
-
-  animation:pulseSoft 1.6s infinite;
-}
-
-@keyframes pulseSoft{
-  0%{transform:scale(1); box-shadow:0 0 10px rgba(199,125,255,.2);}
-  50%{transform:scale(1.02); box-shadow:0 0 25px rgba(199,125,255,.35);}
-  100%{transform:scale(1); box-shadow:0 0 10px rgba(199,125,255,.2);}
-}
-
-/* ===== TITULOS MAIS FORTES ===== */
+/* ===== TITLES ===== */
 .title{
   font-size:30px;
   font-weight:1000;
   letter-spacing:1px;
   text-transform:uppercase;
-
-  text-shadow:
-    0 0 15px rgba(199,125,255,.2),
-    0 0 30px rgba(123,44,191,.2);
+  line-height:1.3;
+  text-shadow:0 0 30px rgba(199,125,255,.25);
 }
 
 .title span{
@@ -329,7 +63,14 @@ p{
   text-shadow:0 0 30px #c77dff;
 }
 
-/* ===== CTA MAIS PREMIUM ===== */
+/* ===== TEXT ===== */
+p{
+  margin-top:12px;
+  opacity:.8;
+  font-size:15px;
+}
+
+/* ===== CTA ===== */
 .cta{
   margin-top:22px;
   padding:18px 20px;
@@ -349,18 +90,12 @@ p{
   color:#fff;
   cursor:pointer;
 
-  box-shadow:
-    0 0 25px rgba(199,125,255,.25),
-    0 0 60px rgba(123,44,191,.15);
+  box-shadow:0 0 30px rgba(199,125,255,.25);
 
   position:relative;
   overflow:hidden;
-
-  z-index:2; /* 🔥 garante que fica acima de tudo */
-  pointer-events:auto; /* 🔥 garante clique */
+  z-index:10;
   display:inline-block;
-
-  transition:0.2s ease;
 }
 
 /* brilho */
@@ -371,42 +106,96 @@ p{
   left:-120%;
   width:120%;
   height:100%;
-
-  background:linear-gradient(
-    120deg,
-    transparent,
-    rgba(255,255,255,0.25),
-    transparent
-  );
-
+  background:linear-gradient(120deg,transparent,rgba(255,255,255,0.25),transparent);
   animation:shine 2.8s infinite;
-
-  z-index:0; /* 🔥 não bloqueia clique */
-  pointer-events:none; /* 🔥 NÃO interfere no clique */
+  pointer-events:none;
 }
 
-/* texto sempre acima do brilho */
-.cta{
-  position:relative;
-}
-
-.cta *{
-  position:relative;
-  z-index:3;
-}
-
-/* animações */
-@keyframes shine{
-  0%{left:-120%;}
-  100%{left:120%;}
-}
-
+/* hover */
 .cta:hover{
   transform:scale(1.03);
 }
 
+/* active */
 .cta:active{
   transform:scale(0.98);
+}
+
+/* ===== QUIZ ===== */
+.quiz{
+  display:none;
+}
+
+.quiz.active{
+  display:block;
+}
+
+/* pergunta */
+.q{
+  font-size:18px;
+  font-weight:900;
+  margin:18px 0 10px;
+}
+
+/* opções */
+.opt{
+  display:block;
+  padding:16px;
+  margin:10px 0;
+  border-radius:14px;
+  border:1px solid rgba(199,125,255,.25);
+  background:rgba(255,255,255,0.03);
+  cursor:pointer;
+  transition:.2s;
+  user-select:none;
+  position:relative;
+  overflow:hidden;
+}
+
+.opt:hover{
+  transform:scale(1.03);
+  border-color:#c77dff;
+  box-shadow:0 0 20px rgba(199,125,255,.25);
+}
+
+.opt:active{
+  transform:scale(0.98);
+  background:rgba(199,125,255,.15);
+}
+
+/* badge */
+.badge{
+  background:linear-gradient(45deg,#3a0060,#7b2cbf);
+  padding:12px 16px;
+  border-radius:14px;
+  font-weight:900;
+  display:inline-block;
+  margin-bottom:15px;
+  animation:float 2s infinite ease-in-out;
+}
+
+/* pulse box */
+.pulse-box{
+  margin-top:22px;
+  padding:16px;
+  border-radius:16px;
+  border:1px solid #c77dff;
+  background:rgba(123,44,191,.08);
+  font-weight:900;
+  animation:pulseSoft 1.6s infinite;
+}
+
+/* ===== ANIMAÇÕES ===== */
+@keyframes pulse{
+  0%{transform:scale(1);}
+  50%{transform:scale(1.04);}
+  100%{transform:scale(1);}
+}
+
+@keyframes pulseSoft{
+  0%{transform:scale(1);}
+  50%{transform:scale(1.02);}
+  100%{transform:scale(1);}
 }
 
 @keyframes gradientMove{
@@ -415,8 +204,13 @@ p{
   100%{background-position:0% 50%;}
 }
 
-@keyframes pulse{
-  0%{transform:scale(1);}
-  50%{transform:scale(1.04);}
-  100%{transform:scale(1);}
+@keyframes shine{
+  0%{left:-120%;}
+  100%{left:120%;}
+}
+
+@keyframes float{
+  0%{transform:translateY(0);}
+  50%{transform:translateY(-4px);}
+  100%{transform:translateY(0);}
 }
