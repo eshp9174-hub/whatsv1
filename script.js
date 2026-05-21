@@ -1,21 +1,14 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const stepsOrder = ["step1", "step2", "step3", "step4", "step5"];
+function nextStep(id){
+  document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
 
-  window.nextStep = function(id){
-    document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
-    document.getElementById(id).classList.add('active');
-  };
+function nextQ(nextId){
+  document.querySelectorAll('#step3 .quiz').forEach(q => q.classList.add('hidden'));
+  document.getElementById(nextId).classList.remove('hidden');
+}
 
-  // QUIZ FLOW (respostas levam pra próxima pergunta dentro do step3)
-  const quizSteps = document.querySelectorAll(".opt");
-
-  quizSteps.forEach(opt => {
-    opt.addEventListener("click", () => {
-      const current = document.getElementById("step3");
-      const next = document.getElementById("step4");
-
-      current.classList.remove("active");
-      next.classList.add("active");
-    });
-  });
-});
+function finishQuiz(){
+  document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+  document.getElementById('step4').classList.add('active');
+}
