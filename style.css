@@ -103,12 +103,85 @@ p{
 }
 
 /* ===== QUIZ ===== */
-..quiz{
+.quiz{
   display:none;
 }
 
 .quiz.active{
   display:block;
+}
+
+/* PERGUNTA */
+.q{
+  font-size:18px;
+  font-weight:900;
+  margin:20px 0 15px;
+  text-shadow:0 0 20px rgba(199,125,255,.25);
+}
+
+/* OPÇÕES DO QUIZ (BONITO + CLICÁVEL) */
+.opt{
+  display:block;
+  padding:14px;
+  margin:10px 0;
+  border-radius:14px;
+  border:1px solid rgba(199,125,255,.25);
+  background:rgba(255,255,255,0.03);
+  cursor:pointer;
+
+  transition:.2s;
+  user-select:none;
+
+  font-weight:600;
+}
+
+.opt:hover{
+  transform:scale(1.02);
+  border-color:#c77dff;
+  box-shadow:0 0 20px rgba(199,125,255,.25);
+}
+
+.opt:active{
+  transform:scale(0.98);
+  background:rgba(199,125,255,.15);
+}
+
+/* CTA PULSANTE */
+.pulse{
+  animation:pulse 1.3s infinite;
+}
+
+@keyframes pulse{
+  0%{transform:scale(1);}
+  50%{transform:scale(1.04);}
+  100%{transform:scale(1);}
+}
+
+/* BADGE */
+.badge{
+  background:linear-gradient(45deg,#3a0060,#7b2cbf);
+  padding:12px 16px;
+  border-radius:14px;
+  font-weight:900;
+  display:inline-block;
+  margin-bottom:15px;
+  animation:float 2s infinite ease-in-out;
+}
+
+@keyframes float{
+  0%{transform:translateY(0);}
+  50%{transform:translateY(-4px);}
+  100%{transform:translateY(0);}
+}
+
+/* PULSE BOX */
+.pulse-box{
+  margin-top:20px;
+  padding:14px;
+  border-radius:14px;
+  border:1px solid #c77dff;
+  animation:pulse 1.5s infinite;
+  font-weight:800;
 }
 
 /* QUESTION */
