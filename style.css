@@ -103,13 +103,8 @@ p{
 }
 
 /* ===== QUIZ ===== */
-.quiz{
-  display:none;
-}
-
-.quiz.active{
-  display:block;
-}
+.quiz { display: none; }
+.quiz.active { display: block; }
 
 /* PERGUNTA */
 .q{
