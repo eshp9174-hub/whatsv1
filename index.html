@@ -114,15 +114,16 @@ svg{display:block}
 .dm-vsl-wrap{
   margin:28px auto 0;
   width:100%;
-  max-width:420px;
+  max-width:320px;
 }
 
 .dm-local-video{
   position:relative;
   width:100%;
-  max-width:400px;
+  max-width:320px;
+  height:569px;
   margin:0 auto;
-  aspect-ratio:16/9;
+  aspect-ratio:auto;
   border-radius:14px;
   overflow:hidden;
   background:#050506;
@@ -203,6 +204,16 @@ svg{display:block}
 
 @media(max-width:480px){
 
+  .dm-vsl-wrap{
+    max-width:330px;
+  }
+
+  .dm-local-video{
+    max-width:330px;
+    height:587px;
+  }
+
+
   .dm-timer{
     padding:12px 18px;
     gap:9px;
@@ -225,6 +236,16 @@ svg{display:block}
 }
 
 @media(max-width:390px){
+
+  .dm-vsl-wrap{
+    max-width:310px;
+  }
+
+  .dm-local-video{
+    max-width:310px;
+    height:551px;
+  }
+
 
   .dm-title{
     font-size:25px;
@@ -2011,7 +2032,7 @@ svg{display:block}
       preload="none"
       playsinline
       controlslist="nodownload noplaybackrate"
-      data-src="/images/VSL.mp4">
+      data-src="./vsl.mp4">
     </video>
 
     <button class="dm-local-play" id="dmLocalPlay" type="button" aria-label="Reproduzir vídeo">
