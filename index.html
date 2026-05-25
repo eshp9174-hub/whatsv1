@@ -6,7 +6,7 @@
 <meta content="Pack 3D com acervo de arquivos STL prontos para impressão." name="description"/>
 
 
-<link crossorigin="" href="https://scripts.converteai.net" rel="preconnect"/><link crossorigin="" href="https://cdn.converteai.net" rel="preconnect"/><link href="https://images.converteai.net" rel="dns-prefetch"/><link href="https://license.vturb.com" rel="dns-prefetch"/><link href="https://www.googletagmanager.com" rel="dns-prefetch"/><link href="https://cdn.utmify.com.br" rel="dns-prefetch"/><style>*{box-sizing:border-box}
+<link href="https://www.googletagmanager.com" rel="dns-prefetch"/><link href="https://cdn.utmify.com.br" rel="dns-prefetch"/><style>*{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{margin:0;background:#fff;color:#030712;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
 img{max-width:100%;height:auto}
@@ -115,6 +115,56 @@ svg{display:block}
   margin:28px auto 0;
   width:100%;
   max-width:420px;
+}
+
+.dm-local-video{
+  position:relative;
+  width:100%;
+  max-width:400px;
+  margin:0 auto;
+  aspect-ratio:16/9;
+  border-radius:14px;
+  overflow:hidden;
+  background:#050506;
+  box-shadow:0 12px 26px rgba(0,0,0,.10);
+}
+
+.dm-local-video-el{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  background:#050506;
+}
+
+.dm-local-play{
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:64px;
+  height:64px;
+  transform:translate(-50%,-50%);
+  border:0;
+  border-radius:999px;
+  background:rgba(239,68,68,.96);
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 12px 28px rgba(239,68,68,.28);
+  cursor:pointer;
+  z-index:2;
+}
+
+.dm-local-play span{
+  display:block;
+  margin-left:4px;
+  font-size:25px;
+  line-height:1;
+}
+
+.dm-local-video.dm-playing .dm-local-play{
+  display:none;
 }
 
 /* ===== MOBILE ===== */
@@ -1951,10 +2001,23 @@ svg{display:block}
     <br/>
 <span>+150.000</span> ARQUIVOS PRONTOS
   </h1>
-<!-- VSL VTURB -->
+<!-- VSL LOCAL MP4 -->
 <div class="dm-vsl-wrap">
-<vturb-smartplayer id="vid-6a125f66cc76db57e226a5e0" style="display:block;margin:0 auto;width:100%;max-width:400px;">
-</vturb-smartplayer>
+  <div class="dm-local-video" id="dmLocalVideoBox">
+    <!-- Coloque o arquivo vsl.mp4 na mesma pasta do index.html ou altere o data-src abaixo -->
+    <video
+      id="dmLocalVideo"
+      class="dm-local-video-el"
+      preload="none"
+      playsinline
+      controlslist="nodownload noplaybackrate"
+      data-src="./vsl.mp4">
+    </video>
+
+    <button class="dm-local-play" id="dmLocalPlay" type="button" aria-label="Reproduzir vídeo">
+      <span>▶</span>
+    </button>
+  </div>
 </div>
 
 </section>
@@ -2755,11 +2818,27 @@ svg{display:block}
     setTimeout(function(){showSale();setInterval(showSale,9000)},2800);
   }
 
-  function initVturb(){
-    if(window.__dmVturbLoaded)return;
-    window.__dmVturbLoaded=true;
-    window._plt=window._plt||(performance&&performance.timeOrigin?performance.timeOrigin+performance.now():Date.now());
-    loadScript("https://scripts.converteai.net/b54edd95-0cf2-4ab3-9bfd-580341f69fa6/players/6a125f66cc76db57e226a5e0/v4/player.js");
+  function initLocalVideo(){
+    var box=document.getElementById("dmLocalVideoBox");
+    var video=document.getElementById("dmLocalVideo");
+    var btn=document.getElementById("dmLocalPlay");
+    if(!box||!video||!btn)return;
+
+    function playVideo(){
+      if(!video.getAttribute("src")){
+        video.setAttribute("src",video.getAttribute("data-src")||"./vsl.mp4");
+        video.load();
+      }
+      video.setAttribute("controls","controls");
+      box.classList.add("dm-playing");
+      var p=video.play();
+      if(p&&p.catch){p.catch(function(){})}
+    }
+
+    btn.addEventListener("click",playVideo,{passive:true});
+    video.addEventListener("click",function(){
+      if(video.paused){playVideo()}
+    },{passive:true});
   }
 
   function initTracking(){
@@ -2807,10 +2886,7 @@ svg{display:block}
     initReveal();
     initPopup();
     initFaq();
-    setTimeout(initVturb,700);
-    ["pointerdown","touchstart","keydown"].forEach(function(evt){
-      window.addEventListener(evt,initVturb,{once:true,passive:true});
-    });
+    initLocalVideo();
     idle(initCatCarousel,700);
     idle(initProofCarousel,900);
     idle(initSaleToast,1500);
